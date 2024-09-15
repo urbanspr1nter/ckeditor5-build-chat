@@ -1,0 +1,23 @@
+{
+  "name": "ckeditor5-build-chat",
+  "version": "1.0.0",
+  "description": "A ready to use CKEditor 5 build chat apps!",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build:dist": "webpack --mode production",
+    "build:dev": "webpack --mode development && copyfile ./src/index.html ./dist"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "ckeditor5": "^43.1.0"
+  },
+  "devDependencies": {
+    "copyfile": "^0.1.2",
+    "style-loader": "^4.0.0",
+    "webpack": "^5.94.0",
+    "webpack-cli": "^5.1.4"
+  }
+}

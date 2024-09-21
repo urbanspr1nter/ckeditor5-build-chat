@@ -8,6 +8,9 @@ import {
   Markdown,
 } from "ckeditor5";
 
+import "ckeditor5/ckeditor5.css";
+import "./style.css";
+
 createEditor(document.querySelector("#ckeditor-root"));
 
 function createEditor(parentElement) {
@@ -16,15 +19,10 @@ function createEditor(parentElement) {
 
   parentElement.append(editorRoot);
 
-  ClassicEditor.create(editorRoot, {
+  return ClassicEditor.create(editorRoot, {
     plugins: [Markdown, Essentials, Bold, Italic, Font, Paragraph],
     toolbar: ["bold", "italic"],
   }).then((editor) => {
-    const submitButton = document.querySelector("#button-submit");
-    if (submitButton) {
-      submitButton.addEventListener("click", () => {
-        const output = editor.getData();
-      });
-    }
+    return editor;
   });
 }

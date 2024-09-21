@@ -11,9 +11,7 @@ import {
 import "ckeditor5/ckeditor5.css";
 import "./style.css";
 
-createEditor(document.querySelector("#ckeditor-root"));
-
-function createEditor(parentElement) {
+export async function createEditor(parentElement) {
   const editorRoot = document.createElement("div");
   editorRoot.setAttribute("id", "ckeditor-chat-root");
 

@@ -1,6 +1,7 @@
 // webpack.config.js
 
 const path = require("path");
+const { experiments } = require("webpack");
 
 module.exports = {
   entry: "./src/app.js",
@@ -8,8 +9,7 @@ module.exports = {
     path: path.resolve(__dirname, "dist"),
     filename: "app.js",
     library: {
-      name: "editor",
-      type: "umd",
+      type: "module",
     },
   },
   plugins: [],
@@ -23,5 +23,8 @@ module.exports = {
         use: ["style-loader", "css-loader"],
       },
     ],
+  },
+  experiments: {
+    outputModule: true,
   },
 };

@@ -4,6 +4,7 @@ import {
   Bold,
   Italic,
   Font,
+  Code,
   Paragraph,
   Markdown,
   Autoformat,
@@ -25,12 +26,13 @@ export async function createEditor(parentElement) {
       Essentials,
       Bold,
       Italic,
+      Code,
       Font,
       Paragraph,
       Autoformat,
       CodeBlock,
     ],
-    toolbar: ["bold", "italic", "codeBlock"],
+    toolbar: ["bold", "italic", "code", "codeBlock"],
   }).then((editor) => {
     return editor;
   });

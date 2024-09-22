@@ -6,6 +6,7 @@ import {
   Font,
   Paragraph,
   Markdown,
+  Autoformat,
 } from "ckeditor5";
 
 import "ckeditor5/ckeditor5.css";
@@ -18,7 +19,7 @@ export async function createEditor(parentElement) {
   parentElement.append(editorRoot);
 
   return ClassicEditor.create(editorRoot, {
-    plugins: [Markdown, Essentials, Bold, Italic, Font, Paragraph],
+    plugins: [Markdown, Essentials, Bold, Italic, Font, Paragraph, Autoformat],
     toolbar: ["bold", "italic"],
   }).then((editor) => {
     return editor;
